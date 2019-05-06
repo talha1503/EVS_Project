@@ -82,9 +82,9 @@ def signup():
 @login_required
 def homepage():
     if not session.get('logged_in'):
-        return render_template('login.html')
+        return render_template('login.html',form=form)
     else:
-        return render_template("mainpage.html")
+        return render_template("mainpage.html",form=form)
 
 
 #loginpage
