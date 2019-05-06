@@ -27,7 +27,7 @@ mail=Mail(app)
 
 app.config.update(
     DEBUG=True,
-    MAIL_SERVER='smtp.gmail.com', 
+    MAIL_SERVER='smtp.gmail.com',
     MAIL_PORT=465,
     MAIL_USE_SSL=True,
     MAIL_USERNAME='talha1503@gmail.com',
@@ -79,6 +79,7 @@ def signup():
 
 #Home page
 @app.route('/main')
+@login_required
 def homepage():
     if not session.get('logged_in'):
         return render_template('login.html')
@@ -102,6 +103,7 @@ def login():
 
 
 @app.route("/mail")
+@login_required
 def index():
     msg = Message('Customer Request', sender='talha1503@gmail.com', recipients=['trvt1234@gmail.com'])
     msg.body = "Request from customer regarding water quality testing is being forwarded."
