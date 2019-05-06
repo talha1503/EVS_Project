@@ -1,0 +1,15 @@
+
+<html>
+<h1>LOGIN</h1>
+{% from "_formhelpers.html" import render_field %}
+<form id="loginForm" class="form form-register" method="POST" action="" role="form">
+    {{ form.hidden_tag() }}
+    {{ render_field(form.username, placeholder="username") }}<br>
+    {{ render_field(form.password, placeholder="password") }}<br>
+		<p><input class="btn btn-default btn-submit" type="submit" value="Login">		
+		</p>
+</form>
+<a href="/main">Login</a>
+<a href="/">index</a><br>
+<a href="/signup">Sign Up</a><br>
+</html>
