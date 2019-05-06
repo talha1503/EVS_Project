@@ -96,8 +96,7 @@ def login():
         if user:
             if check_password_hash(user.password, form.password.data):
                 login_user(user,remember=form.remember.data)
-
-                return redirect(url_for('main'))
+                return redirect(url_for('homepage'))
 
     return render_template('login.html',title="Log in",form=form)
 
