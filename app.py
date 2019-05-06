@@ -84,7 +84,7 @@ def homepage():
     if not session.get('logged_in'):
         return render_template('login.html',form=form)
     else:
-        return render_template("mainpage.html",form=form)
+        return render_template("mainpage.html")
 
 
 #loginpage
