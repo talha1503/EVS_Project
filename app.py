@@ -32,7 +32,7 @@ app.config.update(
     MAIL_PORT=465,
     MAIL_USE_SSL=True,
     MAIL_USERNAME='talha1503@gmail.com',
-    MAIL_PASSWORD='b5j6eio92#xc'
+    MAIL_PASSWORD='insert passowrd'
 )
 
 
