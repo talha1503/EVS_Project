@@ -1,5 +1,5 @@
-
 <html>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}">
 <h1>LOGIN</h1>
 {% from "_formhelpers.html" import render_field %}
 <form id="loginForm" class="form form-register" method="POST" action="" role="form">
@@ -10,6 +10,5 @@
 		</p>
 </form>
 <a href="/main">Login</a>
-<a href="/">index</a><br>
 <a href="/signup">Sign Up</a><br>
 </html>
