@@ -101,7 +101,7 @@ def login():
     return render_template('login.html', title='Login', form=form)
 
 
-@app.route("/mail")
+@app.route('/mail')
 def index():
     msg = Message('Customer Request', sender='talha1503@gmail.com', recipients=['trvt1234@gmail.com'])
     msg.body = "Request from customer regarding water quality testing is being forwarded."
